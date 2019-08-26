@@ -8,3 +8,11 @@ window.addEventListener('load', function () {
   game.operateShip()
   game.drawEnemy();
 })
+
+function startGame() {
+  game.operateShip()
+  game.drawEnemy();
+  //window.requestAnimationFrame(startGame)
+}
+
+startGame()

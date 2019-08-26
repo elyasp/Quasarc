@@ -1,18 +1,19 @@
 class Controls {
     constructor(ship) {
         this.ship = ship;
-        this.angle = 0
+        this.left = 0
+        this.right = 0
     }
 
     moveClockwise() {
-        this.game.ctx.rotate(this.angle)
+        this.ship.game.ctx.rotate(this.right)
         this.ship.drawShip()
        console.log('function')
     }
 
     moveCounterWise() {
-       // this.game.ctx.rotate(this.angle)
-       // this.ship.drawShip()
+       this.ship.game.ctx.rotate(this.left)
+       this.ship.drawShip()
        console.log('function')
     }
 
@@ -26,12 +27,12 @@ class Controls {
                 switch (key) {
                     case 37:
                         this.moveCounterWise()
-                        this.angle -= 0.07;
+                        this.left -= 0.001;
                         console.log('Left')
                         break;
                     case 39:
                         this.moveClockwise()
-                        this.angle += 0.07;
+                        this.right += 0.001;
                         console.log('Right')
                         break;
                 }
