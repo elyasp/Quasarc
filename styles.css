@@ -1,10 +1,10 @@
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: darkmagenta
+    background-color: darkred
 }
 
 canvas {
-    background-color: green
+    background-color: black; 
 }

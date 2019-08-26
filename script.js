@@ -1,8 +1,10 @@
-window.addEventListener('load', () => {
-    const $canvas = document.querySelector('canvas');
-    const game = new Game($canvas);
-    game.start();
-  });
+let canvas = document.querySelector('canvas')
+let ctx = canvas.getContext('2d')
+
+let game = new Game(canvas);
+
+window.addEventListener('load', function () {
   
-let width = 1000
-let height = window.innerHeight;
+  game.operateShip()
+  game.drawEnemy();
+})
