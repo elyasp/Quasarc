@@ -4,16 +4,15 @@ class Controls {
     }
 
     moveClockwise() {
-        
-        this.game.ship.angle += 0.09;
+        this.game.ship.angle += 0.1;
         this.game.draw()
-        console.log('moveClockwise')
+        console.log('movedClockwise')
     }
 
     moveCounterwise() {
-        this.game.ship.angle -= 0.09;
+        this.game.ship.angle -= 0.1;
         this.game.draw()
-       console.log('moveCounterwise')
+       console.log('movedCounterwise')
     }
 
 

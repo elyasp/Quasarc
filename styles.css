@@ -2,9 +2,11 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: darkred
+    background-color: darkblue;
 }
 
 canvas {
-    background-color: black; 
+    background-color: black;
+    /*background-image: url('https://cdn.dribbble.com/users/315053/screenshots/3403146/space-travel-800x600loop.gif');
+    background-size: cover; */
 }

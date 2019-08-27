@@ -4,7 +4,6 @@ class Ship {
         this.game = game;
         this.image = new Image()
         this.image.src = "images/spaceship.png"
-       
         this.angle = 0;
         this.radius = 50;
 
@@ -17,7 +16,7 @@ class Ship {
         ctx.translate(630, 235);
         ctx.rotate(this.angle);
 
-        ctx.drawImage(this.image, -15, this.radius, 30, 30)
+        ctx.drawImage(this.image, -15, this.radius, 20, 30)
         ctx.restore();
 
         /*
@@ -41,3 +40,4 @@ class Ship {
     }
 
 } // --game;
+
