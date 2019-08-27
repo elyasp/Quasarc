@@ -5,7 +5,7 @@ class Ship {
         this.image = new Image()
         this.image.src = "images/spaceship.png"
         this.angle = 0;
-        this.radius = 50;
+        this.radius = 70;
 
     }
 
