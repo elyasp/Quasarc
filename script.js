@@ -5,12 +5,12 @@ let game = new Game(canvas);
 
 window.addEventListener('load', function () {
   
-  game.operateShip()
+  game.activateShip()
   game.drawEnemy();
 })
 
 function startGame() {
-  game.operateShip()
+  game.activateShip()
   game.drawEnemy();
   //window.requestAnimationFrame(startGame)
 }

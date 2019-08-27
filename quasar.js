@@ -8,10 +8,9 @@ class Hole {
 
 
     drawCentre () {
-
-
+        
         this.game.ctx.drawImage(this.photo, 590, 195, 80, 80)
-        console.log('center should appear')
+        console.log('drawCentre(), class Hole should appear')
 
        
     }

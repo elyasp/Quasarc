@@ -4,15 +4,24 @@ class Ship {
         this.game = game;
         this.image = new Image()
         this.image.src = "images/spaceship.png"
-        this.controls = new Controls(this)
-        this.controls.setKeyBindings()
+       
+        this.angle = 0;
+        this.radius = 50;
 
     }
 
 
     drawShip() {
-        const angle = 0;
         const ctx = this.game.ctx;
+        ctx.save();
+        ctx.translate(630, 235);
+        ctx.rotate(this.angle);
+
+        ctx.drawImage(this.image, -15, this.radius, 30, 30)
+        ctx.restore();
+
+        /*
+        const angle = 0;
         ctx.save();
         ctx.translate(0, 0);
         ctx.translate(605, 145);
@@ -21,14 +30,14 @@ class Ship {
         ctx.rotate((angle / 360)  * Math.PI);
 
         // ctx.rotate(0.25 * Math.PI);
-        const radius = 0;
-        ctx.drawImage(this.image, radius, radius, 50, 50)
+        const radius = 5;
+        ctx.drawImage(this.image, radius, radius, 30, 30)
         ctx.strokeStyle = 'red';
         ctx.strokeRect(radius, radius, 50, 50);
         
         ctx.restore();
-        console.log('Ship should appear')
+        */
+        console.log('Ship should appear, from Ship.drawShip')
     }
-
 
 } // --game;
