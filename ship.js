@@ -14,9 +14,9 @@ class Ship {
         const angle = 0;
         const ctx = this.game.ctx;
         ctx.save();
-        // ctx.translate(605, 145);
-        ctx.translate(650, 285);
-        // ctx.rotate(0.25 * Math.PI);
+        ctx.translate(0, 0);
+        ctx.translate(605, 145);
+        ctx.rotate(0.25 * Math.PI);
         ctx.translate(-70, -100);
         ctx.rotate((angle / 360)  * Math.PI);
 
