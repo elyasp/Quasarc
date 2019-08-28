@@ -5,7 +5,7 @@ class Ship {
         this.image = new Image()
         this.image.src = "images/spaceship.png"
         this.angle = 0;
-        this.radius = 70;
+        this.radius = 65;
 
     }
 
@@ -16,7 +16,7 @@ class Ship {
         ctx.translate(630, 235);
         ctx.rotate(this.angle);
 
-        ctx.drawImage(this.image, -15, this.radius, 20, 30)
+        ctx.drawImage(this.image, -15, this.radius, 30, 42)
         ctx.restore();
 
         // console.log('Ship should appear, from Ship.drawShip')

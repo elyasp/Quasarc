@@ -5,11 +5,9 @@ class Hole {
         this.photo.src = "images/blackhole.png"
     }
 
-
-
     drawCentre () {
         
-        this.game.ctx.drawImage(this.photo, 580, 185, 100, 100)
+        this.game.ctx.drawImage(this.photo, 570, 175, 120, 120)
         // console.log('drawCentre(), class Hole should appear')
 
        
