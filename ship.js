@@ -18,8 +18,6 @@ class Ship {
 
         ctx.drawImage(this.image, -15, this.radius, 30, 42)
         ctx.restore();
-
-        // console.log('Ship should appear, from Ship.drawShip')
     }
 
     

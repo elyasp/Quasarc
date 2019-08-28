@@ -10,7 +10,7 @@ class Game {
         this.waveFrequency = 90 // ==================== DISTANCE BETWEEN WAVES
         this.timer = 0;
         this.counter = 0;
-        this.SPEED = 15000  // ======================== INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
+        this.SPEED = 12000  // ======================== TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
         this.waveIncreaser = 2 // ===================== STARTING SPEED
 
     }
