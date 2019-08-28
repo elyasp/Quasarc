@@ -1,19 +1,18 @@
-let canvas = document.querySelector('canvas')
-let ctx = canvas.getContext('2d')
+let $canvas = document.querySelector('canvas')
 
-let game = new Game(canvas);
-
+let game = new Game($canvas);
 window.addEventListener('load', function () {
-  game.activateShip()
-  game.drawEnemy();
-  game.drawWaves();
+ game.startGame()
+  // game.activateShip()
+  // game.drawEnemy();
+  // game.drawWaves();
 })
 
-function startGame() {
-  game.activateShip()
-  game.drawEnemy();
-  game.drawWave();
-  //window.requestAnimationFrame(startGame)
-}
+// function startGame() {
+//   game.activateShip()
+//   game.drawEnemy();
+//   game.drawWave();
+//   //window.requestAnimationFrame(startGame)
+// }
 
-startGame()
+// startGame()

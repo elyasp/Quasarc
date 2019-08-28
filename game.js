@@ -8,7 +8,11 @@ class Game {
     this.controls = new Controls(this)
     this.controls.setKeyBindings()
 
-
+    }
+    startGame(){
+        this.activateShip()
+        this.drawEnemy();
+        this.drawWave();
     }
 
     activateShip () {
