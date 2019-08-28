@@ -19,7 +19,7 @@ class Controls {
 
     setKeyBindings() {
         window.addEventListener('keydown', event => {
-            //event.preventDefault();
+            event.preventDefault();
             const key = event.keyCode;
             if (key >= 37 && key <= 39) {
                 switch (key) {

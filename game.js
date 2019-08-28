@@ -7,12 +7,29 @@ class Game {
     this.wave = new Wave (this)
     this.controls = new Controls(this)
     this.controls.setKeyBindings()
+    this.SPEED = 300
+    this.timer= 0
 
     }
     startGame(){
-        this.activateShip()
-        this.drawEnemy();
-        this.drawWave();
+        console.log("game started")
+      this.loop(0)
+    }
+
+    loop (timestamp) {
+        // console.log("loop started")
+        if (this.timer < timestamp - this.SPEED) {
+        console.log("loop started")
+
+          this.runLogic();
+          this.draw();
+          this.timer = timestamp;
+        }
+        window.requestAnimationFrame((timestamp) => this.loop(timestamp));
+      }
+
+    runLogic(){
+
     }
 
     activateShip () {
