@@ -4,15 +4,13 @@ class Controls {
     }
 
     moveClockwise() {
-        this.game.ship.angle += 0.1;
-        this.game.draw()
-        console.log('movedClockwise')
+        this.game.ship.angle += 0.15;
+        
     }
 
     moveCounterwise() {
-        this.game.ship.angle -= 0.1;
-        this.game.draw()
-       console.log('movedCounterwise')
+        this.game.ship.angle -= 0.15;
+        
     }
 
 
@@ -25,11 +23,9 @@ class Controls {
                 switch (key) {
                     case 37:
                         this.moveCounterwise()
-                        console.log('LeftKey')
                         break;
                     case 39:
                         this.moveClockwise()
-                        console.log('RightKey')
                         break;
                 }
             }
