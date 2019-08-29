@@ -5,15 +5,13 @@ class Controls {
 
     moveClockwise() {
         this.game.ship.angle = (Math.PI * 2 + this.game.ship.angle + 0.15) % (Math.PI * 2);
-        
+
     }
 
     moveCounterwise() {
         this.game.ship.angle = (Math.PI * 2 + this.game.ship.angle - 0.15) % (Math.PI * 2);
-        
+
     }
-
-
 
     setKeyBindings() {
         window.addEventListener('keydown', event => {
@@ -30,8 +28,7 @@ class Controls {
                 }
             }
         })
-    } // -- F 
+    } // --- function
+
 
 } // ------ class 
-
-

@@ -14,9 +14,8 @@ class Ship {
         ctx.save();
         ctx.translate(630, 235);
         ctx.rotate(this.angle);
-
         ctx.drawImage(this.image, -15, this.radius, 30, 40)
         ctx.restore();
     }
     
-} // --game;
+}

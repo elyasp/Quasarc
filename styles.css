@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,7 +11,7 @@ body {
     background-image: url('images/body-background.gif');
     background-size: cover; 
     color: #2ca5f5;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Rajdhani', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow:7px 7px 10px red;
 }
 
@@ -36,18 +38,26 @@ h1 {
 }
 
 .playbutton {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Rajdhani', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.7em;
     border-radius: 30px;
     border-style: none;
     background-color: #2ca5f5;
     padding: 10px 30px;
     margin-top: 30vh;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 p {
     color: #4f6166;
-    text-shadow:1px 1px 1px #2ca5f5;
+    text-shadow:1px 1px 10px #2ca5f5;
 
 }
+
+.game-over {
+    font-size: 10em;
+}
+
+
 

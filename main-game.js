@@ -55,7 +55,7 @@ class Game {
         this.clear();
         this.ship.drawShip();
         this.hole.drawCentre();
-        this.waves.map(arrayObject => arrayObject.drawWaves());
+        this.waves.map(waveObject => waveObject.drawWaves());
         this.waveCounter.survivedWaves();
 
     }
@@ -63,14 +63,13 @@ class Game {
     collisionDetect() {
 
         for (let waveObject of this.waves) {
-            if (waveObject.waveRadius > 70 && waveObject.waveRadius < 100) {
+            if (waveObject.waveRadius > 70 && waveObject.waveRadius < 105) {
                 const angle = (this.ship.angle + Math.PI) % (Math.PI * 2);
                 const start = (waveObject.startRadian + Math.PI / 2) % (Math.PI * 2);
                 const end = (waveObject.endRadian + Math.PI / 2) % (Math.PI * 2);
                 if (!(angle > start && angle < end)) {
-                    //window.location.href = "./index.html" // ========================= to game over screen
-
-
+                    window.confirm(`You survived ${this.waveCounter.score} waves`)
+                    window.location.href = "./game-over.html"
                 }
             }
         }
