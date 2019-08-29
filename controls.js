@@ -32,12 +32,6 @@ class Controls {
         })
     } // -- F 
 
-    /*
-    properties called pressing R and L
-    in update loop, if press R true then accelerate 
-*/
-
-
 } // ------ class 
 
 

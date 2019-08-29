@@ -11,8 +11,8 @@ class Game {
         this.waveFrequency = 95 // ==================== DISTANCE BETWEEN WAVES
         this.timer = 0;
         this.counter = 0;
-        this.SPEED = 12000 // ======================== TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
-        this.waveIncreaser = 2 // ===================== STARTING SPEED
+        this.SPEED = 12000 // ========================= TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
+        this.waveSpeed = 2 // ========================= STARTING SPEED
 
     }
     startGame() {
@@ -28,19 +28,16 @@ class Game {
     }
 
     runLogic(timestamp) {
-        //this is where you define when are waves being pushed to the array
         if (this.counter % this.waveFrequency === 0) {
             this.waves.push(new Wave(this))
-            // console.log("wave was pushed", this.waves)
         }
 
         if (this.timer < timestamp - this.SPEED) {
-            console.log("speed was changed, actual speed", this.waveIncreaser)
-            this.waveIncreaser += 0.25
+            this.waveSpeed += 0.25
             this.waveFrequency -= 1
             this.timer = timestamp
         }
-        //this changes the radius of the waves with the general game speed
+
         this.waves.map(waveObject => waveObject.radiusDecrease())
         this.waves.map(waveObject => waveObject.waveRemover())
         this.collisionDetect();
@@ -49,33 +46,29 @@ class Game {
 
     clear() {
         this.ctx.clearRect(0, 0, 1260, 570)
+
     }
 
-  
+
 
     draw() {
         this.clear();
         this.ship.drawShip();
         this.hole.drawCentre();
-        this.waves.map(arrayObject => arrayObject.drawWaves())
-
+        this.waves.map(arrayObject => arrayObject.drawWaves());
+        this.waveCounter.survivedWaves();
 
     }
 
     collisionDetect() {
-        
+
         for (let waveObject of this.waves) {
-            if (waveObject.waveRadius > 70 && waveObject.waveRadius < 90) {
-                // debugger;
+            if (waveObject.waveRadius > 70 && waveObject.waveRadius < 100) {
                 const angle = (this.ship.angle + Math.PI) % (Math.PI * 2);
                 const start = (waveObject.startRadian + Math.PI / 2) % (Math.PI * 2);
                 const end = (waveObject.endRadian + Math.PI / 2) % (Math.PI * 2);
                 if (!(angle > start && angle < end)) {
-                    console.log('You hit the wave!')
-
-
-
-
+                    //window.location.href = "./index.html" // ========================= to game over screen
 
 
                 }

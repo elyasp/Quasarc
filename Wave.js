@@ -1,12 +1,10 @@
 class Wave {
     constructor(game) {
         this.game = game;
-        // this.startRadian = Math.random() * 10;
-        // this.endRadian = this.startRadian + 5.35;
         this.startRadian = Math.random() * Math.PI * 2;
         this.endRadian = (Math.PI * 2 + this.startRadian + 0.95) % (Math.PI * 2);;
         this.waveRadius = 700;
-        this.decreaseSpeed = this.game.waveIncreaser;
+        this.decreaseSpeed = this.game.waveSpeed;
         this.color = `hsla(${Math.random() * 360}, 100%, 35%, 1)`
     }
 
@@ -32,6 +30,7 @@ class Wave {
     waveRemover() {
         if (this.waveRadius < 5) {
             this.game.waves.shift()
+            this.game.waveCounter.score++;
         }
     }
 }
