@@ -1,11 +1,12 @@
 class Wave {
     constructor(game) {
         this.game = game;
-        this.startRadian = Math.random() * 10;
-        this.endRadian = this.startRadian + 5.35
-        this.waveRadius = 700
-        //this.collisionRadiusArea = (this.radius > 70 && this.radius < 103) // ====UNITS IN PIXELS
-        this.decreaseSpeed = this.game.waveIncreaser
+        // this.startRadian = Math.random() * 10;
+        // this.endRadian = this.startRadian + 5.35;
+        this.startRadian = Math.random() * Math.PI * 2;
+        this.endRadian = (Math.PI * 2 + this.startRadian + 0.95) % (Math.PI * 2);;
+        this.waveRadius = 700;
+        this.decreaseSpeed = this.game.waveIncreaser;
         this.color = `hsla(${Math.random() * 360}, 100%, 35%, 1)`
     }
 
@@ -16,9 +17,10 @@ class Wave {
         this.game.ctx.lineWidth = 25;
         this.game.ctx.lineCap = 'round';
         this.game.ctx.beginPath()
-        this.game.ctx.arc(630, 235, this.waveRadius, this.startRadian, this.endRadian)
+        this.game.ctx.arc(630, 235, this.waveRadius, this.endRadian, this.startRadian)
         this.game.ctx.stroke()
         this.game.ctx.closePath()
+        
     }
 
     radiusDecrease() {
@@ -32,5 +34,4 @@ class Wave {
             this.game.waves.shift()
         }
     }
-
 }

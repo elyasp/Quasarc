@@ -4,12 +4,12 @@ class Controls {
     }
 
     moveClockwise() {
-        this.game.ship.angle += 0.15;
+        this.game.ship.angle = (Math.PI * 2 + this.game.ship.angle + 0.15) % (Math.PI * 2);
         
     }
 
     moveCounterwise() {
-        this.game.ship.angle -= 0.15;
+        this.game.ship.angle = (Math.PI * 2 + this.game.ship.angle - 0.15) % (Math.PI * 2);
         
     }
 
@@ -32,6 +32,10 @@ class Controls {
         })
     } // -- F 
 
+    /*
+    properties called pressing R and L
+    in update loop, if press R true then accelerate 
+*/
 
 
 } // ------ class 
