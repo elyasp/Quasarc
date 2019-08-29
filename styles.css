@@ -10,6 +10,7 @@ body {
     background-size: cover; 
     color: #2ca5f5;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow:7px 7px 10px red;
 }
 
 canvas {
@@ -21,11 +22,17 @@ h4 {
     margin: 20px;;
     font-weight: 100;
     font-size: 20px;
+    text-shadow:7px 7px 7px red;
 }
 
 h1 {
     margin: 0;
     font-weight: 100;
+    text-shadow:7px 7px 10px red;
+}
+
+.playbutton:hover {
+    background-color: red;
 }
 
 .playbutton {
@@ -37,3 +44,4 @@ h1 {
     padding: 10px 30px;
     margin-top: 30vh;
 }
+

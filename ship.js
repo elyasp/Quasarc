@@ -4,9 +4,10 @@ class Ship {
         this.game = game;
         this.image = new Image()
         this.image.src = "images/spaceship.png"
-        this.angle = 0;
+        this.angle = 4.7;
         this.radius = 65;
-
+        this.collisionLength = (this.angle)
+        
     }
 
 
@@ -16,10 +17,16 @@ class Ship {
         ctx.translate(630, 235);
         ctx.rotate(this.angle);
 
-        ctx.drawImage(this.image, -15, this.radius, 30, 42)
+        ctx.drawImage(this.image, -15, this.radius, 30, 40)
         ctx.restore();
     }
 
+    collisionDetect() {
+        if (this.game.wave.waveRadius > 70 && this.game.wave.waveRadius < 103) {
+            console.log('collision')
+        }
+
+    }
 
 } // --game;
 

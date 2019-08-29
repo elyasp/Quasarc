@@ -29,9 +29,7 @@ class Game {
     runLogic(timestamp) {
         //this is where you define when are waves being pushed to the array
         if (this.counter % this.waveFrequency === 0) {
-            debugger;
             this.waves.push(new Wave(this))
-            //TODO erase waves that are not being used from the array
             console.log("wave was pushed", this.waves)
         }
 
@@ -54,18 +52,12 @@ class Game {
     draw() {
         this.clear();
         this.ship.drawShip();
+        this.ship.collisionDetect();
         this.hole.drawCentre();
         this.waves.map(arrayObject => arrayObject.drawWaves())
 
 
     }
 
- 
-
-    waveCollision() {
-       
-
-        }
-    
 
 }
