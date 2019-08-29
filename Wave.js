@@ -33,4 +33,4 @@ class Wave {
             this.game.waveCounter.score++;
         }
     }
-}
+} 

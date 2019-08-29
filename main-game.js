@@ -15,8 +15,8 @@ class Game {
         this.waveSpeed = 2 // ========================= STARTING SPEED
 
     }
+
     startGame() {
-        console.log("game started")
         this.loop(0)
     }
 
@@ -41,6 +41,7 @@ class Game {
         this.waves.map(waveObject => waveObject.radiusDecrease())
         this.waves.map(waveObject => waveObject.waveRemover())
         this.collisionDetect();
+        this.hole.turn()
 
     }
 
@@ -48,8 +49,6 @@ class Game {
         this.ctx.clearRect(0, 0, 1260, 570)
 
     }
-
-
 
     draw() {
         this.clear();
@@ -63,13 +62,14 @@ class Game {
     collisionDetect() {
 
         for (let waveObject of this.waves) {
-            if (waveObject.waveRadius > 70 && waveObject.waveRadius < 105) {
+            debugger;
+            if (waveObject.waveRadius > 70 && waveObject.waveRadius < 100) {
                 const angle = (this.ship.angle + Math.PI) % (Math.PI * 2);
                 const start = (waveObject.startRadian + Math.PI / 2) % (Math.PI * 2);
                 const end = (waveObject.endRadian + Math.PI / 2) % (Math.PI * 2);
                 if (!(angle > start && angle < end)) {
-                    window.confirm(`You survived ${this.waveCounter.score} waves`)
                     window.location.href = "./game-over.html"
+                    window.confirm(`You survived ${this.waveCounter.score} waves`)
                 }
             }
         }
