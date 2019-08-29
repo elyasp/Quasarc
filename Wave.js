@@ -21,15 +21,20 @@ class Wave {
     }
 
     radiusDecrease() {
-        if (this.radius > 10 ) {
+        if (this.radius > 4 ) {
             this.radius -= this.decreaseSpeed
         }
     }
 
+    waveRemover() {
+        if (this.radius < 5) {
+            this.game.waves.shift()
+        }
+    }
 
 
     waveCollision() {
-
+        
     }
 
 }

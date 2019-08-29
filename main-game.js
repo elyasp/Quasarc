@@ -29,9 +29,10 @@ class Game {
     runLogic(timestamp) {
         //this is where you define when are waves being pushed to the array
         if (this.counter % this.waveFrequency === 0) {
+            debugger;
             this.waves.push(new Wave(this))
             //TODO erase waves that are not being used from the array
-            console.log("wave was pushed")
+            console.log("wave was pushed", this.waves)
         }
 
         if (this.timer < timestamp - this.SPEED) {
@@ -42,7 +43,8 @@ class Game {
         }
         //this changes the radius of the waves with the general game speed
         this.waves.map(waveObject => waveObject.radiusDecrease())
-
+        this.waves.map(waveObject => waveObject.waveRemover())
+        
     }
 
     clear() {
@@ -57,5 +59,13 @@ class Game {
 
 
     }
+
+ 
+
+    waveCollision() {
+       
+
+        }
+    
 
 }

@@ -20,9 +20,6 @@ class Ship {
         ctx.restore();
     }
 
-    
-
-
 
 } // --game;
 
