@@ -4,14 +4,6 @@ class Controls {
         this.controlHandler = handler;
     }
 
-    // moveClockwise() {
-    //     this.game.ship.angle = (Math.PI * 2 + this.game.ship.angle + 0.15) % (Math.PI * 2);
-    // }
-
-    // moveCounterwise() {
-    //     this.game.ship.angle = (Math.PI * 2 + this.game.ship.angle - 0.15) % (Math.PI * 2);
-    // }
-
     setKeyBindings() {
         const controlHandler = this.controlHandler;
     
@@ -22,11 +14,9 @@ class Controls {
                 switch (key) {
                     case 37:
                         controlHandler('leftKeyDown')
-                        // this.moveCounterwise()
                         break;
                     case 39:
                         controlHandler('rightKeyDown')
-                        // this.moveClockwise()
                         break;
                 }
             }
@@ -39,11 +29,9 @@ class Controls {
                 switch (key) {
                     case 37:
                         controlHandler('leftKeyUp')
-                        // this.moveCounterwise()
                         break;
                     case 39:
-                        controlHandler('rightKeyUP')
-                        // this.moveClockwise()
+                        controlHandler('rightKeyUp')
                         break;
                 }
             }

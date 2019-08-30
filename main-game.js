@@ -26,7 +26,7 @@ class Game {
             case 'leftKeyUp':
                 this.pressingLeftKey = false;
                 break;
-            case 'rightKeyUP':
+            case 'rightKeyUp':
                 this.pressingRightKey = false;
                 break;
         } 
@@ -44,7 +44,7 @@ class Game {
     }
 
     runLogic(timestamp) {        
-        // Move counterclockwise
+        
         const acceleration = 0.005;
         const startingSpeed = 0.1;
 
@@ -60,7 +60,8 @@ class Game {
         this.ship.speed = Math.min(this.ship.speed, 3);
         console.log(this.ship.angle + this.ship.speed);
         this.ship.angle = (Math.PI * 2 + this.ship.angle + this.ship.speed) % (Math.PI * 2);
-        // Move clockwise
+
+        
         if (this.counter % this.waveFrequency === 0) {
             this.waves.push(new Wave(this))
         }
@@ -103,7 +104,7 @@ class Game {
                 console.log(start, angle, end)
                 if (!(angle > start && angle < end)) {
                     this.waveCounter.shield--;
-                    if (this.waveCounter.shield === 0) {
+                    if (this.waveCounter.shield === -1) {
                     window.location.href = "./game-over.html"
                     window.confirm(`You survived ${this.waveCounter.score} waves`)
                 
