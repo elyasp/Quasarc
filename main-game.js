@@ -8,11 +8,11 @@ class Game {
         this.waveCounter = new Counter(this)
         this.controls.setKeyBindings();
         this.waves = [];
-        this.waveFrequency = 95 // ==================== DISTANCE BETWEEN WAVES
+        this.waveFrequency = 93 // ==================== DISTANCE BETWEEN WAVES
         this.timer = 0;
         this.counter = 0;
-        this.SPEED = 11000 // ========================= TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
-        this.waveSpeed = 2 // ========================= STARTING SPEED
+        this.SPEED = 5000 // ========================= TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
+        this.waveSpeed = 2.2 // ========================= STARTING SPEED
     }
 
     controlHandler (control) {
@@ -104,7 +104,7 @@ class Game {
                 console.log(start, angle, end)
                 if (!(angle > start && angle < end)) {
                     this.waveCounter.shield--;
-                    if (this.waveCounter.shield === -1) {
+                    if (this.waveCounter.shield === 0) {
                     window.location.href = "./game-over.html"
                     window.confirm(`You survived ${this.waveCounter.score} waves`)
                 
