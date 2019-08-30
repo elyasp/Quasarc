@@ -3,7 +3,7 @@ class Wave {
         this.game = game;
         this.startRadian = Math.random() * Math.PI * 2;
         this.endRadian = (Math.PI * 2 + this.startRadian + 0.95) % (Math.PI * 2);;
-        this.waveRadius = 700;
+        this.waveRadius = 800;
         this.decreaseSpeed = this.game.waveSpeed;
         this.color = `hsla(${Math.random() * 360}, 100%, 35%, 1)`
     }

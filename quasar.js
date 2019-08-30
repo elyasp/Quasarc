@@ -16,7 +16,7 @@ class Hole {
     }
 
     turn () {
-        this.rotator += 0.02
+        this.rotator -= 0.05
     }
 
 }
