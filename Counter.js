@@ -2,7 +2,7 @@ class Counter {
     constructor(game) {
         this.game = game;
         this.score = 0;
-        this.shield = 100;
+        this.shield = 100000;
     }
 
     survivedWaves () {
