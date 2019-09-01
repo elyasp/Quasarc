@@ -8,11 +8,11 @@ class Game {
         this.waveCounter = new Counter(this)
         this.controls.setKeyBindings();
         this.waves = [];
-        this.waveFrequency = 1 // ==================== DISTANCE BETWEEN WAVES
+        this.waveFrequency = 95 // ==================== DISTANCE BETWEEN WAVES
         this.timer = 0;
         this.counter = 0;
-        this.SPEED = 50000000 // ========================= TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
-        this.waveSpeed = 0.2 // ========================= STARTING SPEED
+        this.SPEED = 10000 // ========================= TIME INTERVAL FOR WAVE FREQUENCY & WAVE SPEED INCREASAL 
+        this.waveSpeed = 2.2 // ========================= STARTING SPEED
     }
 
     controlHandler (control) {
